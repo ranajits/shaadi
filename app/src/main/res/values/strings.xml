@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Shaadi</string>
+    <string name="reject">Reject</string>
+    <string name="accept">Accept</string>
+    <string name="todays_matches">Today\'s Requests</string>
+    <string name="recent_matches">Received Requests</string>
+    <string name="accepted">ACCEPTED</string>
+    <string name="fetching">Fetching Received Requests</string>
+</resources>

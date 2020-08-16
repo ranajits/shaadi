@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.ranajit.shaadi.ui.homescreen.viewmodel.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_bg_color"
+        tools:context="com.ranajit.shaadi.ui.HomeFragment">
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:drawableLeft="@drawable/ic_navigation"
+            android:drawableRight="@drawable/ic_search"
+            android:drawablePadding="@dimen/_15sdp"
+            android:fontFamily="@font/proxy_bold"
+            android:gravity="center_vertical"
+            android:paddingVertical="@dimen/_15sdp"
+            android:text="@string/todays_matches"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_top_matches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/proxy_bold"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/recent_matches"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_profiles"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingBottom="@dimen/_30sdp"
+            android:clipToPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_top_matches" />
+
+        <include
+            android:id="@+id/prgrs"
+            layout="@layout/progress_indicator"
+            android:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
